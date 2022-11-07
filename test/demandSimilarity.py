@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer as SBert
 #encoding="unicode_escape"
 dataDemand=pd.io.parsers.read_csv('C:/Users/zhongxing/Desktop/lan/data/需求信息.csv',encoding='gbk')
 resultFile = "C:/Users/zhongxing/Desktop/lan/data/result.txt"
-out_to_file=True
+out_to_file=False
 ##fillna()是一个用来填补数据集中的缺失值或不完整值的方法。
 #企业经营范围
 #dataDemand['businessScope']=dataDemand['businessScope'].fillna('')
