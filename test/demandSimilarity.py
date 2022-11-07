@@ -19,9 +19,9 @@ dataDemand['demandDescription']=dataDemand['demandDescription'].fillna('')
 #需求内容(考虑到需求描述不完善的情况下，将需求标题考虑进去)
 dataDemand['demandContent']=dataDemand['demandTitle']+dataDemand['demandDescription']
 
-#model = SBert('paraphrase-multilingual-MiniLM-L12-v2')
-##这里考虑到模型网站访问失败的情况，直接将模型下载到本地使用
-model = SBert('C:\\Users\zhongxing\Desktop\lan\project\paraphrase-multilingual-MiniLM-L12-v2')
+model = SBert('paraphrase-multilingual-MiniLM-L12-v2')
+##这里考虑到模型网站访问失败的情况，也可以直接将模型下载到本地使用
+#model = SBert('C:\\Users\zhongxing\Desktop\lan\project\paraphrase-multilingual-MiniLM-L12-v2')
 
 #businessScope:单条企业经营范围，demandContents：多条需求信息
 def getDemand(businessId,businessScope,demandContents,dataDemandId):
