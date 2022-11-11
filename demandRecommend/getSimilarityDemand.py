@@ -3,9 +3,9 @@ from sentence_transformers import SentenceTransformer as SBert
 
 #businessScope:单条企业经营范围，demandContents：多条需求信息
 def getSimilarityDemand(businessId,businessScope,demandContents,dataDemandId,getIdWithScore):
-    model = SBert('paraphrase-multilingual-MiniLM-L12-v2')
+    # model = SBert('paraphrase-multilingual-MiniLM-L12-v2')
     ##这里考虑到模型网站访问失败的情况，也可以直接将模型下载到本地使用
-    # model = SBert('C:\\Users\zhongxing\Desktop\lan\project\paraphrase-multilingual-MiniLM-L12-v2')
+    model = SBert('C:\\Users\zhongxing\Desktop\lan\project\paraphrase-multilingual-MiniLM-L12-v2')
     sentencesBusiness = businessScope
     demandSim_total = {}
     resultItem = []
